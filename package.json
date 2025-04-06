@@ -1,0 +1,26 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "Um aplicativo que funciona como uma lista de afazeres",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liazinea/to-do-list.git"
+  },
+  "keywords": [
+    "to-do-list"
+  ],
+  "author": "liazinea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liazinea/to-do-list/issues"
+  },
+  "homepage": "https://github.com/liazinea/to-do-list#readme",
+  "devDependencies": {
+    "electron": "^35.1.4"
+  }
+}
