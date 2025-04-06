@@ -63,7 +63,7 @@ lista.addEventListener('click', verificaCheck)
 function removeTarefa(ev){
     if(ev.target.tagName === 'DIV'){
         ev.target.parentElement.remove()
-        if(quantFeitas > 0){
+        if(quantFeitas > 0 && ev.target.parentElement.classList.contains("checked")){
             quantFeitas--
         }
         quantTarefas--
