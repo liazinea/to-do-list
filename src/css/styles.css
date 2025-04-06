@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Silkscreen", cursive;
+}
+
+body{
+    background-color: #b95050;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.titlebar {
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 31px;
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    app-region: drag;
+  }
+  
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 50px;
+    gap: 20px;
+}
+
+header div{
+    color: rgb(80, 6, 6);
+    padding: 5px 10px;
+    line-height: .5;
+    display: flex;
+    justify-content: center;
+}
+.calendario{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.data{
+    border-radius: 20%;
+    border: 5px solid #fcb2b2;
+    background-color: #f5dfdf;    
+}
+
+.dia{
+    font-size: 25px;
+    color: #f5dfdf;
+    width: fit-content;
+    background-color: #b95050;
+    padding-block: 20px;
+    border-radius: 50%;
+    margin-block: 10px;
+}
+.diaSemana{
+    font-size: 20px;
+}
+.mes{
+    font-size: 18px;
+}
+
+.progresso{
+    color: rgb(80, 6, 6);
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    border: 5px solid #fcb2b2;
+    background-color: #f5dfdf;
+    padding: 20px;
+    width: 60%;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+progress {
+    -webkit-appearance: none;
+    width: 100%;
+}
+  
+::-webkit-progress-bar {
+    background-color: #db9191;
+    margin-block: 10px;
+    border-radius: 12px;
+}
+
+progress::-webkit-progress-value { 
+    background-color: #b95050;
+    border-radius: 12px;
+}
+
+/* MAIN */
+
+.tarefa{
+    width: 100%; 
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: #f5dfdf;
+    border: solid 5px transparent;
+    color: rgb(80, 6, 6);
+}
+
+.tarefa:focus{
+    border: 5px solid #fcb2b2;
+    outline: none;
+}
+
+.tarefa::placeholder{
+    color: #b95050;
+}
+
+.erro{
+    min-width: 30%;
+    height: 20px;
+    margin: 15px;
+    color: white;
+}
+
+.lista{
+    margin-top: 30px;
+    padding: 20px;
+    min-height: 30vh;
+    border: 5px solid #fcb2b2;
+    background-color: #f5dfdf;
+    border-radius: 12px;
+    font-size: 18px;
+    color: rgb(80, 6, 6);
+    list-style: none;
+}
+
+.itens{
+    width: 100%;
+    position: relative;
+    padding-block: 10px;
+    cursor: pointer;
+}
+.esconde{
+    display: none;
+}
+.checked{
+    text-decoration: line-through;
+}
+
+.fecha{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-block: 10px;
+}
