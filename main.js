@@ -3,6 +3,8 @@ const path = require('path')
 
 const createWindow = () => {
   const win = new BrowserWindow({
+    icon: path.join(__dirname, 'fav.ico'),
+    show: false,
     width: 800,
     height: 750,
     titleBarStyle: 'hidden',
@@ -12,9 +14,9 @@ const createWindow = () => {
     },
     webPreferences:{
       preload: path.join(__dirname, 'preload.js')
-    }
+    },
   })
-
+  win.on('ready-to-show', win.show)
   win.loadFile('src/index.html')
 }
 

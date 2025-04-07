@@ -5,7 +5,29 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.liazinea.todo",
+    "productName": "To-Do List",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "fav.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "To-Do List"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,6 +43,7 @@
   },
   "homepage": "https://github.com/liazinea/to-do-list#readme",
   "devDependencies": {
-    "electron": "^35.1.4"
+    "electron": "^35.1.4",
+    "electron-builder": "^26.0.12"
   }
 }
