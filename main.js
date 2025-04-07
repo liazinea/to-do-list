@@ -1,12 +1,21 @@
 const { app, BrowserWindow } = require('electron/main')
+const path = require('path')
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 750,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: 'rgb(80, 6, 6)',
+      symbolColor: '#fcb2b2'
+    },
+    webPreferences:{
+      preload: path.join(__dirname, 'preload.js')
+    }
   })
 
-  win.loadFile('index.html')
+  win.loadFile('src/index.html')
 }
 
 app.whenReady().then(() => {
