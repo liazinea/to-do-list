@@ -3,7 +3,7 @@ let dias = document.getElementById('dias');
 
 const date = new Date();
 let dia = date.getDate().toString().padStart(2, "0");
-let diaSemana = date.toLocaleString("pt-BR", { weekday: "long" }).replace(".", "")
+let diaSemana = date.toLocaleString("pt-BR", { weekday: "short" }).replace(".", "")
 let mes = date.toLocaleString("pt-BR", { month: "long" }).replace(".", "");
 
 dias.innerHTML = `<div class='calendario'><div class="diaSemana"><p>${diaSemana}</p></div><div class="dia"><p>${dia}</p></div><div class="mes"><p>${mes}</p></div></div>`;
